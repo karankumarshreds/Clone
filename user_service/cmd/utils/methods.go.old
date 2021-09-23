@@ -1,0 +1,11 @@
+package main 
+
+import (
+	"fmt"
+)
+
+func (app *users.App) failOnError(err error, msg string) {
+	if err != nil {
+		fmt.Println(msg, err)
+	}
+}
