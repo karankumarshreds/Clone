@@ -44,7 +44,7 @@ func (app *App) Initialize(PORT string, ENV string, DB_CONFIG DB_CONFIG) {
 	app.config.port = PORT 
 
 	// database 
-	connectionString := fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable", DB_CONFIG.user, DB_CONFIG.password, DB_CONFIG.database)
+	connectionString := fmt.Sprintf("user=%s password=%s dbname=%s sslmode=disable", DB_CONFIG.User, DB_CONFIG.Password, DB_CONFIG.Database)
 	DB, err := sql.Open("postgres", connectionString)	
 	app.failOnError(err, "Unable to connect to the database")
 	app.infoLog.Println("Connection made with Database")
