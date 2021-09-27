@@ -1,13 +1,15 @@
 package main
 
 import (
+	"net/http"
 	"log"
-	"http/rest"
+	"github.com/karankumarshreds/Clone/user_service/pkg/http/rest"
 )
 
 func main() {
 	log.Println("Starting on port 8000")
-	router := rest.initHandlers
+	router := rest.InitHandlers()
+	log.Fatal(http.ListenAndServe(":8000", router))
 
 }
 
