@@ -25,9 +25,9 @@ type App struct {
 }
 
 type DB_CONFIG struct {
-	user string
-	password string 
-	database string 
+	User string
+	Password string 
+	Database string 
 }
 
 
